@@ -146,7 +146,7 @@ function Form() {
                   <ul>
                     <li>Paises:</li>
                     {createdActivityInfo.countries.map((country) => (
-                      <li key={country}>{country}</li>
+                      <li key={country}>{country}.</li>
                     ))}
                   </ul>
                 )}

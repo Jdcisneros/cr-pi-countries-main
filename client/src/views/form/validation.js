@@ -40,8 +40,8 @@ const validate = (input) => {
 
   const durationNumber = parseInt(input.duration);
   
-  if (isNaN(durationNumber) || durationNumber < 1 || durationNumber >5 ) {
-    errors.duration = "(La duracion debe ser un numero del 1 al 5 horas)";
+  if (isNaN(durationNumber) || durationNumber < 1 || durationNumber >9 ) {
+    errors.duration = "(La duracion debe ser un numero del 1 al 9 horas)";
   }
 
   if (input.duration.trim() === "") {
