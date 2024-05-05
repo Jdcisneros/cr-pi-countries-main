@@ -1,0 +1,48 @@
+.detailContainer{
+background-color: rgb(255, 255, 255, 0.9 );
+  width: 70%;
+  height: auto;
+  margin-top: 7%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  
+
+  }
+  .image{
+    margin-right: 5%;
+  }
+  .image img{
+    object-fit: cover;
+     border: 1px solid black;
+     margin-top: 10%;
+     width: 100%;
+     height: auto;
+     
+     
+    
+   }  
+
+  .cardDetail {
+  
+  width: 70%;
+  
+  margin-left: 5%;
+  margin-bottom: 5%;
+  }
+  
+  .cardDetail h2 {
+      font-size: 100px;
+      color: #333;
+  }
+  .cardDetail p{
+      
+      font-size: 16px;
+      color: #666;
+  }
+
+  
+  

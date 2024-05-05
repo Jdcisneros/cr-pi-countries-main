@@ -1,0 +1,44 @@
+.landingContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    height: 700px;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.landingContainer img {
+    width: 50%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.landingContainer2 {
+    margin-left: 5%;
+}
+
+.landingContainer2 button{
+    padding: 10px 20px;
+    width: 130px;
+    height: 40px;
+    border: none;
+
+    background-color: #970e10; 
+    color: #fff; 
+    cursor: pointer; 
+}
+
+.landingContainer button:hover {
+    background-color: #570709;
+}
+
+.landingContainer2 h2{
+    font-size:80px;
+    color: rgb(36, 36, 36);
+}

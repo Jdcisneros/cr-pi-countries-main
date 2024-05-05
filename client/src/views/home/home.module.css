@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../../assets/backgroundWord3.jpg") no-repeat center fixed;
+    
+    font-family: verdana;
+    background-size:cover;
+
+   
+  }
+
+
+
+
+.homeCardContainer{
+  background-color: rgb(255, 255, 255, 0.9 );
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  width: 70%;
+  height: auto;
+  margin-top: 7%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1%;
+  padding: 20px;
+  z-index: 2
+  
+
+}
+
+.paginationbutton {
+  display: flex;
+  justify-content: center;
+  
+   
+  }
+  
+
+  .paginationbutton button {
+    padding: 10px 20px;
+    width: 130px;
+    height: 40px;
+    border: none;
+    
+    background-color: #970e10 ; 
+    color: #fff; 
+    cursor: pointer;
+   
+  }
+
+
+  .paginationbutton button:hover {
+    background-color: #570709 ;
+    
+  }
+
+
+.selectContainer select {
+  margin-top: 15%;
+  width: 100%;
+  padding: 10px 20px;
+  height: 40px;
+  border: none;
+  background-color: #970e10 ; 
+  color: #fff; 
+  cursor: pointer;
+  z-index: 2;
+}
+
+.selectContainer select:hover {
+  background-color: #570709;
+}
+
+.selectContainer select t:focus {
+  outline: none;
+
+}
+
+.homeSelect {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top:0;
+  width: 70%;
+  margin-top: 6%;
+  z-index: 1000;
+  
+  
+}
+
+.selectContainer{
+  width: 40%;
+}
+
+.buttonDes{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+ margin-top: 3%;
+ margin-left: 32% ;
+ z-index: 1000;
+}
+
+.buttonDes button {
+ 
+  height: 40px;
+  border: none;
+  background-color: #970e10 ; 
+  color: #fff;  
+  cursor: pointer;
+
+ 
+}
+
+.buttonDes button:hover {
+  background-color: #570709;
+  
+}

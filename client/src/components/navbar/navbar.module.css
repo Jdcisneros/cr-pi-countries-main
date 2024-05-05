@@ -1,0 +1,91 @@
+
+.navbarContainer{
+    background-color: #970e10       ;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    margin: 0 auto;
+    height: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+
+
+.navbarContainer form {
+    display: flex;
+    align-items: center;
+    margin-right: 20%;
+  }
+  
+  .navbarContainer input {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    
+    width: 250px; 
+    margin-right: 10px;
+  }
+  
+  .navbarContainer button {
+    padding: 10px 20px;
+    width: 200px;
+    height: 40px;
+    border: none;
+     
+    background-color: #970e10 ; 
+    color: #fff; 
+    cursor: pointer; 
+  }
+  
+  .navbarContainer button:hover {
+    background-color: #570709 ;
+    
+  }
+
+  .navbarContainer img {
+    width: 4%;
+    height: 4%;
+    padding: 15px;
+    width: 45%;
+    height:75%
+    
+   
+  }
+
+  .navbarContainer a {
+        text-decoration: none;
+        color: inherit;
+        width: 20%;
+        display:grid;
+        margin-right:30%;
+      }
+  
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+      }
+
+
+.navbarContainer h2{
+        padding: 10px;
+        
+        color: #fafafa;
+        
+    }
+
+.optionsContainer{
+    display: flex;
+    margin-right: 1%;
+    
+    
+}
+
+.optionsContainer2{
+    display: flex;
+    margin-right: 1%;
+}
