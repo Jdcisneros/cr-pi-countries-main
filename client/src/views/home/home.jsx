@@ -10,6 +10,7 @@ import {
 import Cards from "../../components/cards/cards";
 import Navbar from "../../components/navbar/navbar";
 import styles from "./home.module.css";
+import Loading from "../../components/loading/loading";
 
 function Home() {
   const dispatch = useDispatch();
@@ -24,7 +25,14 @@ function Home() {
   const [selectPoblacion, setSelectPoblacion] = useState("");
   const [desFilters, setDesFilters] = useState(false);
   const activityCountry = useSelector((state) => state.activitiesCountries);
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    // Aquí puedes simular una carga de datos
+    setTimeout(() => {
+      setLoading(false); // Cuando termina la carga
+    }, 1500); // Simulamos una carga de 3 segundos
+  }, []);
   //TRAER A LOS PAISES
   function handleChange(e) {
     setSearchString(e.target.value);
@@ -154,6 +162,8 @@ function Home() {
   
   return (
     <div className={styles.homeContainer}>
+      {loading ? <Loading /> : 
+       <div>
       <div>
         <Navbar handleChange={handleChange} handleSubmit={handleSubmit} />
       </div>
@@ -213,10 +223,11 @@ function Home() {
       <div className={styles.paginationbutton}>
         <button onClick={prevPage}>Anterior</button>
         <button onClick={nextPage}>Siguiente</button>
+        </div>
       </div>
       </div>
-      </div>
-    </div>
+        </div>
+}</div>
   );
 }
 

@@ -56,3 +56,15 @@ background-color: rgb(255, 255, 255, 0.9 );
   margin-bottom: 22px;
   color: #333;
 }
+
+.cardDetailbutton button {
+border: none;
+background: none;
+transition: transform 0.2s ease-out;
+color: #666;
+}
+
+.cardDetailbutton button:hover {
+  transform: scale(1.1);
+  color: #333;
+}

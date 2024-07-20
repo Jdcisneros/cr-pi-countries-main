@@ -27,15 +27,18 @@
     padding: 10px 20px;
     width: 130px;
     height: 40px;
+    border-radius: 15px;
     border: none;
-
     background-color: #970e10; 
     color: #fff; 
     cursor: pointer; 
+    transition: transform 0.2s ease-out;
 }
+
 
 .landingContainer button:hover {
     background-color: #570709;
+    transform: scale(1.1);
 }
 
 .landingContainer2 h2{

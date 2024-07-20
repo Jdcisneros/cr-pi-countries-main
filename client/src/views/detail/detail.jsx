@@ -1,15 +1,24 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styles from "./detail.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../../components/navbar/navbar";
 import { useSelector } from "react-redux";
+import Loading from "../../components/loading/loading";
 
 function Detail() {
   const params = useParams();
   const [country, setCountry] = useState({});
   const activityCountry = useSelector((state) => state.activitiesCountries);
   const activities = useSelector((state) => state.activities);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Aquí puedes simular una carga de datos
+    setTimeout(() => {
+      setLoading(false); // Cuando termina la carga
+    }, 1000); // Simulamos una carga de 3 segundos
+  }, []);
 
   useEffect(() => {
     axios(`http://localhost:3001/countries/${params?.id}`)
@@ -64,9 +73,19 @@ function Detail() {
 
   return (
     <div>
-      <Navbar />
+       {loading ? <Loading /> : 
+       <div>
+      <div>
+
+        <Navbar />
+      </div>
       <div className={styles.detailContainer}>
         <div className={styles.cardDetail}>
+          <Link to="/countries">
+          <div className={styles.cardDetailbutton}>
+        <button>🡨 Volver al inicio</button>
+            </div>
+          </Link>
           <div>
             <div className={styles.titleCountryDetail}>
               <h2>{country?.name}
@@ -82,7 +101,7 @@ function Detail() {
 
           <div className={styles.detailInfoContainer}>
             <div>
-            <p> {country?.continents}</p>
+            <p>Continente: {country?.continents}</p>
               <p>Capital: {country?.capital}</p>
               <p>Subregión: {country?.subregion}</p>
               <p>Área: {country?.area}</p>
@@ -108,9 +127,10 @@ function Detail() {
               <img src={country?.flags} alt={country.name} />
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+         </div>
+       </div>
+       </div>
+}</div>
   );
 }
 
