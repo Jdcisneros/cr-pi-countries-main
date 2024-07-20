@@ -25,12 +25,14 @@ const getAllCountries = async () => {
     const mapCountries = mapApi(CountriesData);
 
     for (const country of mapCountries) {
+      // Asegúrate de que 'country' solo contenga atributos válidos para 'Country' model
+      const { id, name, flags, continents, subregion, capital, area, population} = country;
+
       await Country.findOrCreate({
-        where: { id: country.id },
-        defaults: country,
+        where: { id }, // Busca por 'id'
+        defaults: { id, name, flags, continents, subregion, capital, area, population},
       });
     }
-
     const allCountries = await Country.findAll();
     return allCountries;
   } catch (error) {

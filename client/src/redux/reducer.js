@@ -1,6 +1,6 @@
-import { CREATE_ACTIVITY, GET_BY_NAME, GET_COUNTRIES,GET_ACTIVITIES } from "./actions";
+import { CREATE_ACTIVITY, GET_BY_NAME, GET_COUNTRIES,GET_ACTIVITIES, GET_ACTIVITIES_COUNTRIES } from "./actions";
 
-let inicialState = { allCountries: [], activities: [] };
+let inicialState = { allCountries: [], activities: [], activitiesCountries: [] };
 
 function rootReducer(state = inicialState, action) {
   switch (action.type) {
@@ -23,6 +23,11 @@ function rootReducer(state = inicialState, action) {
     return {
       ...state,
       activities: action.payload,
+    };
+    case GET_ACTIVITIES_COUNTRIES:
+    return {
+      ...state,
+      activitiesCountries: action.payload,
     };
     default:
       return state;

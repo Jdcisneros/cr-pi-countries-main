@@ -53,7 +53,7 @@
    
     flex-wrap: wrap;
     justify-content: center;
-     width: 90%;
+     
   
    
 }
@@ -71,24 +71,41 @@
 }
 
 .buttonSelect {
-  width: 40px;
-  margin-left: 5%;
-  padding: 8px 15px; 
-  border: none;
-  
-  background-color: #970e10 ; 
-  color: #fff; 
-  cursor: pointer; 
+    /* width: 40px; */
+    margin-left: 5%;
+    /* padding: 8px 15px; */
+    border: none;
+    background: none;
+    color: #757575;
+    cursor: pointer;
+    transition: transform 0.2s ease-out ;
 }
 
-.buttonSelect:hover {
-  background-color: #570709 ;
-}
+
 
 .paisSelect {
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+}
+.paisSelect li {
+  border: solid 1px rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+  height: 30px;
+  align-items: center;
+  font-size: clamp(10px, 4vw, 15px);
+}
+.paisSelect li:hover {
+  transform: scale(1.1);
+  }
+
+.buttonSelect:hover {
+transform: scale(1.7);
 }
 
 .buttonSelect2{

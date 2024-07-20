@@ -3,6 +3,10 @@ const validate = (input) => {
 
   //VALIDACIONES DE NAME
 
+  if (!/^[a-zA-Z\s]+$/.test(input.name)) {
+    errors.name = "(El nombre no debe contener símbolos)";
+  }
+
   if(input.name.trim() == "") {
     errors.name = "(Este campo no debe estar vacio)"
   }
@@ -24,16 +28,16 @@ const validate = (input) => {
 
   //VALIDACIONES DE DIFICULTAD
 
-  const dificultyNumber = parseInt(input.dificulty);
+  const difficultyNumber = parseInt(input.difficulty);
   
-  if (isNaN(dificultyNumber) || dificultyNumber < 1 || dificultyNumber >5 ) {
-    errors.dificulty = "(La dificultad debe ser un numero del 1 al 5)";
+  if (isNaN(difficultyNumber) || difficultyNumber < 1 || difficultyNumber >5 ) {
+    errors.difficulty = "(La dificultad debe ser un numero del 1 al 5)";
   }
 
-  if (input.dificulty.trim() === "") {
-    errors.dificulty = "(Este campo no debe estar vacio)"
-  } else if (input.dificulty.trim().length > 1) {
-    errors.dificulty = "(La dificultad debe tener 1 dígito)";
+  if (input.difficulty.trim() === "") {
+    errors.difficulty = "(Este campo no debe estar vacio)"
+  } else if (input.difficulty.trim().length > 1) {
+    errors.difficulty = "(La dificultad debe tener 1 dígito)";
   }
 
   //VALIDACIONES DE DURACION
@@ -55,10 +59,10 @@ const validate = (input) => {
   if (input.season === "") {
     errors.season = "(Se debe seleccionar la temporada)"
   }
-
-  if(input.countries.length === 0) {
-    errors.countries = "(No hay paises seleccionados)"
+  if (input.countryIds.length === 0) {
+    errors.countryIds = "(Se debe seleccionar al menos un país)"
   }
+  
 
     return errors;
   }

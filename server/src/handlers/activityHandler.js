@@ -1,22 +1,29 @@
 const {
   getAllActivities,
-  createActivity,
+  createActivityController,
 } = require("../controllers/activityController");
 
-const createActivities = async (req, res) => {
-  const { name, dificulty, duration, season, countries } = req.body;
+const { sequelize } = require('../db');
+
+const createActivityHandler = async (req, res) => {
+  const { name, difficulty, duration, season, countryIds } = req.body;
+  console.log("Datos recibidos:", req.body);
+
   try {
-    const response = await createActivity({
+    const activity = await createActivityController({
       name,
-      dificulty,
+      difficulty,
       duration,
       season,
-      countries
+      countryIds,
+      sequelize // Asegúrate de que sequelize esté disponible aquí
     });
-    res.status(200).json(response);
+
+    console.log("Actividad creada:", activity);
+    res.status(200).json(activity);
   } catch (error) {
     console.error("No se pudo crear la actividad", error);
-    res.status(400).json({ error: "no se pudo crear la actividad" });
+    res.status(400).json({ error: "No se pudo crear la actividad" });
   }
 };
 
@@ -25,11 +32,12 @@ const getActivities = async (req, res) => {
     const activities = await getAllActivities();
     res.status(200).json(activities);
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    console.error("No se pudo crear la actividad:", error);
+    res.status(400).json({ error: "No se pudo crear la actividad" });
   }
 };
 
 module.exports = {
-    createActivities,
+  createActivityHandler,
   getActivities,
 };

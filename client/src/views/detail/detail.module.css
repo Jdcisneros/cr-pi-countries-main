@@ -13,36 +13,46 @@ background-color: rgb(255, 255, 255, 0.9 );
 
   }
   .image{
-    margin-right: 5%;
+   object-fit: cover;
+   margin-right: 15px;
   }
-  .image img{
-    object-fit: cover;
+  .image img{  
      border: 1px solid black;
-     margin-top: 10%;
-     width: 100%;
-     height: auto;
-     
-     
-    
+     width: 500px;
    }  
 
   .cardDetail {
   
-  width: 70%;
-  
-  margin-left: 5%;
-  margin-bottom: 5%;
+    width: 100%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+  .cardDetail li {
+    color: #666;
   }
   
-  .cardDetail h2 {
-      font-size: 100px;
-      color: #333;
-  }
+
   .cardDetail p{
       
       font-size: 16px;
       color: #666;
   }
 
+  .detailInfoContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
   
-  
+
+  .titleCountryDetail h2 {
+    font-size: 100px;
+    color: #333;
+    display: flex;
+    align-items: flex-end;
+}
+.titleCountryDetail p {
+  margin-bottom: 22px;
+  color: #333;
+}

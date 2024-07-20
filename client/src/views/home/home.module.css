@@ -13,16 +13,11 @@ body {
 
 
 .homeCardContainer{
-  background-color: rgb(255, 255, 255, 0.9 );
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-  width: 70%;
-  height: auto;
-  margin-top: 7%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1%;
+  display: flex;
+  background-color: rgb(255, 255, 255, 0.7);
+  margin-top: 80px;
   padding: 20px;
-  z-index: 2
+
   
 
 }
@@ -36,6 +31,8 @@ body {
   
 
   .paginationbutton button {
+    border-radius: 10px;
+    margin: 10px;
     padding: 10px 20px;
     width: 130px;
     height: 40px;
@@ -44,18 +41,50 @@ body {
     background-color: #970e10 ; 
     color: #fff; 
     cursor: pointer;
+    transition: transform 0.2s ease-out;
    
   }
 
 
   .paginationbutton button:hover {
-    background-color: #570709 ;
     
+ 
+    transform: scale(1.1);
   }
+    
+
 
 
 .selectContainer select {
-  margin-top: 15%;
+  border-radius: 10px;
+  margin-top: 10%;
+  width: 100%;
+  padding: 10px 20px;
+  height: 40px;
+  border: none;
+  background-color: #970e10 ; 
+  color: white; 
+  cursor: pointer;
+  z-index: 2;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease-out;
+ 
+}
+.selectContainer select:hover{
+  transform: scale(1.1);
+}
+
+.homeSelect {
+  display: flex;
+  
+  min-width: 200px;
+  margin-top: 110px;
+  flex-direction: column;
+}
+
+
+.homeSelect button{
+  border-radius: 10px;
   width: 100%;
   padding: 10px 20px;
   height: 40px;
@@ -63,57 +92,9 @@ body {
   background-color: #970e10 ; 
   color: #fff; 
   cursor: pointer;
-  z-index: 2;
 }
 
-.selectContainer select:hover {
-  background-color: #570709;
-}
-
-.selectContainer select t:focus {
-  outline: none;
-
-}
-
-.homeSelect {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  top:0;
-  width: 70%;
-  margin-top: 6%;
-  z-index: 1000;
-  
-  
-}
-
-.selectContainer{
-  width: 40%;
-}
-
-.buttonDes{
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
- margin-top: 3%;
- margin-left: 32% ;
- z-index: 1000;
-}
-
-.buttonDes button {
- 
-  height: 40px;
-  border: none;
-  background-color: #970e10 ; 
-  color: #fff;  
-  cursor: pointer;
-
- 
-}
-
-.buttonDes button:hover {
+.homeSelect button:hover {
   background-color: #570709;
   
 }
